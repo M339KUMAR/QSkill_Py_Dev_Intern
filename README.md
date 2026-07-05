@@ -6,6 +6,6 @@ They Notify in LinkedIn,
 
 Interested Students / Professionals can register
 Online and submit the projects after completing 
-the rasks alloted to them.
+the tasks alloted to them.
 
 Thank You.
