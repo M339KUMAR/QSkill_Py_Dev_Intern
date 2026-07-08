@@ -37,3 +37,20 @@ def get_response(history):
 #    )
 
 #    return response.text
+
+def create_chat():
+
+    chat = client.chats.create(
+        model="gemini-2.5-flash"
+    )
+
+    return chat
+
+
+def send_message(chat, prompt):
+
+    response = chat.send_message(
+        prompt
+    )
+
+    return response.text
