@@ -1,0 +1,17 @@
+
+What you'll have after Lesson 1
+✅ Project folder
+✅ Virtual environment
+✅ Git repository
+✅ GitHub repository
+✅ First commit
+✅ Professional project structure
+
+What You've Learned
+✅  By the end of Lesson 2, you'll understand:
+✅  How to securely store API keys.
+✅  How to use the Google Gemini Python SDK.
+✅  How to send prompts to Gemini.
+✅  How to receive AI-generated responses.
+✅  How to build a simple Streamlit interface.
+
