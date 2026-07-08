@@ -95,7 +95,9 @@ if prompt:
     # Gemini response
     with st.spinner("Thinking..."):
 
-        response = get_response(prompt)
+        #response = get_response(prompt)
+        history = build_history(st.session_state.messages)
+        response = get_response(history)
 
     st.chat_message("assistant").markdown(response)
 
