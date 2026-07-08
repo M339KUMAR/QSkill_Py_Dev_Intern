@@ -24,19 +24,35 @@ with st.sidebar:
 
     st.header("Gemini AI Chatbot")
 
-    st.write("### Features")
-
-    st.write("✅ Chat Interface")
-
-    st.write("⏳ Conversation Memory")
-
-    st.write("⏳ Google Search")
-
+    st.markdown("-------")
+ 
+    #st.write("### Features")
+    st.subheader("Features")
+    #st.write("✅ Chat Interface")
+    st.success("Chat Interface")
+    #st.write("⏳ Conversation Memory")
+    st.success("Conversation Memory")
+    #st.write("⏳ Google Search")
+    st.success("Google  Search")
+ 
     st.write("⏳ Export Chat")
-    
+ 
     st.write("⏳ Chat History Download")
+ 
+    st.info("Professional UI:")
 
-    if st.button("Clear Chat"):
+    st.metric(
+             "Messages",
+             len(st.session_state.messages)
+    )
+    st.info(
+    "Model: Gemini 2.5 Flash"
+    )
+ 
+    st.markdown("------------")
+
+    if st.button("🆕 New Chat"):
+    #if st.button("Clear Chat"):
         st.session_state.messages = []
         st.session_state.chat = create_chat()
         st.rerun()
