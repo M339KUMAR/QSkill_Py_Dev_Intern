@@ -81,4 +81,12 @@ Your chatbot now supports:
 
 This satisfies a major part of your internship requirement: remembering previous user messages and responses.
 #--------------------------------------------------
+Before Lesson 5: 
+
+The memory implementation above is a great learning exercise, but the latest Google Gemini SDK also provides a Chat Session API that automatically manages conversation history. It's cleaner, more efficient, and closer to how production applications are built.
+
+Since your goal is to build an industry-level project, I recommend that in Lesson 5 we refactor our chatbot to use the SDK's chat session while also enabling Google Search grounding for real-time information. 
+
+This will give you cleaner code and satisfy the remaining internship requirement in a way that's aligned with current best practices.
+#------------------------------------------------
 
