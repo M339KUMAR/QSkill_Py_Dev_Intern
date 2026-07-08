@@ -148,5 +148,24 @@ By the end of this lesson, our chatbot will include:
 ✅ Download chat history
 ✅ Better error handling
 ✅ Professional page layout
+#-------------------------------------------------
+Instead of storing only:
+{
+    "role":"user",
+    "content":prompt
+}
+We'll store
+{
+    "role":"user",
+    "content":prompt,
+    "time":get_timestamp()
+}
+Likewise for the assistant's response:
+{
+    "role":"assistant",
+    "content":response,
+    "time":get_timestamp()
+}
+This allows us to display or export when each message was sent.
 #--------------------------------------------------
 
