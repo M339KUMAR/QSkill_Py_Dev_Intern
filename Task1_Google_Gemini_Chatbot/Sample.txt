@@ -66,4 +66,6 @@ The history sent to Gemini becomes:
         ]
     }
 ]
+
+Gemini now receives the entire conversation and can answer context-aware questions.
 #-----------------------------------------
