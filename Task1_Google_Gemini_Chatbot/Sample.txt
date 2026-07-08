@@ -6,7 +6,7 @@ What you'll have after Lesson 1
 ✅ GitHub repository
 ✅ First commit
 ✅ Professional project structure
-
+#----------------------------------------
 What You've Learned
 ✅  By the end of Lesson 2, you'll understand:
 ✅  How to securely store API keys.
@@ -24,3 +24,46 @@ What We've Achieved
 ✅ Sidebar
 ✅ Clear Chat button
 
+#------------------------------
+Suppose the conversation is:
+#-----------------------------
+User:
+Hello
+
+Assistant:
+Hi!
+
+User:
+My name is Praveen.
+#-----------------------------------
+The history sent to Gemini becomes:
+#-----------------------------------
+[
+    {
+        "role": "user",
+        "parts": [
+            {
+                "text": "Hello"
+            }
+        ]
+    },
+
+    {
+        "role": "assistant",
+        "parts": [
+            {
+                "text": "Hi!"
+            }
+        ]
+    },
+
+    {
+        "role": "user",
+        "parts": [
+            {
+                "text": "My name is Praveen."
+            }
+        ]
+    }
+]
+#-----------------------------------------
