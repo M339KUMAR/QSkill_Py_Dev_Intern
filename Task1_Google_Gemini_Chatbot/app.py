@@ -5,13 +5,32 @@ print("Welcome to Gemini AI Chatbot")
 import streamlit as st
 from chatbot import get_response
 
+#--------------------------------------       
 st.set_page_config(
     page_title="Gemini AI Chatbot",
     page_icon="🤖",
 )
 
 st.title("🤖 Gemini AI Chatbot")
+#--------------------------------------       
+with st.sidebar:
 
+    st.header("Gemini AI Chatbot")
+
+    st.write("### Features")
+
+    st.write("✅ Chat Interface")
+
+    st.write("⏳ Conversation Memory")
+
+    st.write("⏳ Google Search")
+
+    if st.button("Clear Chat"):
+
+        st.session_state.messages = []
+
+        st.rerun()
+#--------------------------------------       
 #user_input = st.text_area(
 #    "Ask me anything..."
 #)
