@@ -15,3 +15,5 @@ What You've Learned
 ✅  How to receive AI-generated responses.
 ✅  How to build a simple Streamlit interface.
 
+https://aistudio.google.com/api-keys?project=gen-lang-client-0945953124
+
