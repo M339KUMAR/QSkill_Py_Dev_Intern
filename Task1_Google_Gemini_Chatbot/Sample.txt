@@ -16,7 +16,7 @@ What You've Learned
 ✅  How to build a simple Streamlit interface.
 
 https://aistudio.google.com/api-keys?project=gen-lang-client-0945953124
-
+#-----------------------------------------
 What We've Achieved in Lesson 3: 
 ✅ Professional chat interface
 ✅ Chat history displayed
@@ -68,7 +68,7 @@ The history sent to Gemini becomes:
 ]
 
 Gemini now receives the entire conversation and can answer context-aware questions.
-
+#----------------------------------------
 from Lesson 4: 
 Your chatbot now supports:
 
@@ -137,5 +137,16 @@ In the next lesson, we'll make the application feel like a polished AI assistant
 🔄 �⁠Start a new conversation
 ⚙️ �⁠Settings panel
 📊 �⁠Chat statistics (messages exchanged, tokens if available)
+
+Goal
+By the end of this lesson, our chatbot will include:
+✅ Professional sidebar
+✅ New Chat button
+✅ Chat statistics
+✅ Conversation timestamps
+✅ Export chat as TXT
+✅ Download chat history
+✅ Better error handling
+✅ Professional page layout
 #--------------------------------------------------
 
