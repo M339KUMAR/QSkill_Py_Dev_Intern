@@ -6,7 +6,7 @@ import streamlit as st
 from chatbot import get_response
 from chatbot import create_chat, send_message
 from memory import build_history
-from utils import export_chart
+from utils import export_chart, get_timestamp
 
 #--------------------------------------       
 st.set_page_config(
