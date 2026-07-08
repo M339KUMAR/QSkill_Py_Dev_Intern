@@ -4,6 +4,7 @@ print("Welcome to Gemini AI Chatbot")
 
 import streamlit as st
 from chatbot import get_response
+from memory import build_history
 
 #--------------------------------------       
 st.set_page_config(
