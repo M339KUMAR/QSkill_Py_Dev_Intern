@@ -199,4 +199,15 @@ We'll add:
 From this point onward, we're no longer just building an internship project—we're building a professional AI application that you can proudly showcase during interviews.
 
 After Lesson 7, our chatbot will feel much closer to ChatGPT.
+
+Objectives
+In this lesson 7, we will add:
+✅ Multiple Gemini Models
+✅ AI Personality (System Prompt)
+✅ Temperature Control
+✅ Max Output Tokens
+✅ Theme Selection
+✅ Better Sidebar Organization
+✅ Chat Search
+✅ About Section
 #------------------------------------------------
