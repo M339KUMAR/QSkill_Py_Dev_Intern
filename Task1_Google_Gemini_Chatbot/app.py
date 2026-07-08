@@ -6,6 +6,7 @@ import streamlit as st
 from chatbot import get_response
 from chatbot import create_chat, send_message
 from memory import build_history
+from utils import export_chart
 
 #--------------------------------------       
 st.set_page_config(
@@ -13,7 +14,14 @@ st.set_page_config(
     page_icon="🤖",
 )
 
-st.title("🤖 Gemini AI Chatbot")
+#st.title("🤖 Gemini AI Chatbot")
+st.title("🤖 Gemini AI Assistant")
+
+st.caption(
+"Powered by Google Gemini • Memory • Google Search"
+)
+
+st.divider()
 #--------------------------------------       
 if "chat" not in st.session_state:
 
@@ -36,8 +44,16 @@ with st.sidebar:
     st.success("Google  Search")
  
     st.write("⏳ Export Chat")
+    chat_text=export_chat(
+             st.session_state.messages
+            )
  
     st.write("⏳ Chat History Download")
+    st.download_button(
+                     "📥 Download Chat",
+                     chat_text,
+                     file_name="chat_history.txt"
+                     )
  
     st.info("Professional UI:")
 
@@ -123,13 +139,17 @@ if prompt:
         #response = get_response(prompt)
         history = build_history(st.session_state.messages)
         #response = get_response(history)
-
-        response = send_message(
+        try:
+         #This prevents the app from crashing 
+         #if there's an API or network issue.
+         
+            response = send_message(
                              st.session_state.chat,
                              prompt
                     )
+        except Exception as e:
+            response = f"Error: {e}"          
 
- 
     st.chat_message("assistant").markdown(response)
 
     st.session_state.messages.append(
