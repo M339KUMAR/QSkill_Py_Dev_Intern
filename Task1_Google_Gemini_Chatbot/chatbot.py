@@ -64,3 +64,28 @@ def send_message(chat, prompt):
          )
      )
     return response.text
+
+
+SYSTEM_PROMPTS = {
+
+    "General Assistant":
+        "You are a helpful AI assistant.",
+
+    "Python Expert":
+        "You are an experienced Python developer.",
+
+    "Data Scientist":
+        "You are an expert in Data Science and Machine Learning.",
+
+    "Career Coach":
+        "You help candidates prepare for interviews.",
+
+    "Teacher":
+        "Explain concepts step-by-step using simple language."
+}
+
+full_prompt = (
+    SYSTEM_PROMPTS[personality]
+    + "\n\n"
+    + prompt
+)
