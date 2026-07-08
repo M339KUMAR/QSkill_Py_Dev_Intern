@@ -113,5 +113,29 @@ Gold price in India today
 USD to INR exchange rate
 
 The chatbot should use Google Search where appropriate while still answering general knowledge questions directly.
+
+What We've Built So Far
+Your chatbot now supports:
+✅ Modern Streamlit chat interface
+✅ Conversation memory
+✅ Gemini chat session
+✅ Google Search grounding
+✅ Secure API key management
+✅ Modular project structure
+✅ GitHub version control
+This already satisfies the core requirements of your internship task.
+#-------------------------------------------------
+Lesson 6 Preview: Professional UI & Chat Management
+
+In the next lesson, we'll make the application feel like a polished AI assistant by adding:
+
+🎨 �⁠A professional sidebar with model selection
+🕒 �⁠Chat timestamps
+💬 �⁠"Typing..." animation
+📥 �⁠Export chat to TXT and PDF
+💾 �⁠Save chat history locally
+🔄 �⁠Start a new conversation
+⚙️ �⁠Settings panel
+📊 �⁠Chat statistics (messages exchanged, tokens if available)
 #--------------------------------------------------
 
