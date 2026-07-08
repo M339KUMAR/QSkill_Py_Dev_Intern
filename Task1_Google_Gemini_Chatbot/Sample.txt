@@ -98,3 +98,20 @@ We'll upgrade our chatbot to:
 ✅ Answer questions using current web data
 ✅ Continue using Streamlit
 
+Test It
+Run:
+streamlit run app.py
+
+Try asking:
+
+What is today's weather in Mumbai?
+Current Bitcoin price
+Latest AI news
+Who is the CEO of Google?
+IPL points table today
+Gold price in India today
+USD to INR exchange rate
+
+The chatbot should use Google Search where appropriate while still answering general knowledge questions directly.
+#--------------------------------------------------
+
