@@ -1,6 +1,7 @@
 
 
-#print("Welcome to Gemini AI Chatbot")
+print("Welcome to Gemini AI Chatbot")
+
 import streamlit as st
 from chatbot import get_response
 
