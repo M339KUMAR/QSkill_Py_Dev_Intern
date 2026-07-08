@@ -210,4 +210,15 @@ In this lesson 7, we will add:
 ✅ Better Sidebar Organization
 ✅ Chat Search
 ✅ About Section
+
+What is Temperature?
+Value        Behavior
+========================
+0.0    -      Very factual
+0.3    -      Stable answers
+0.7    -      Balanced
+1.2    -      Creative
+2.0    -      Highly creative
+===============================
+This is a common interview question.
 #------------------------------------------------
