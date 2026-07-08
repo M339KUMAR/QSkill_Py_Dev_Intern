@@ -4,6 +4,7 @@ print("Welcome to Gemini AI Chatbot")
  
 import streamlit as st
 from chatbot import get_response
+from chatbot import create_chat, send_message
 from memory import build_history
 
 #--------------------------------------       
@@ -14,6 +15,11 @@ st.set_page_config(
 
 st.title("🤖 Gemini AI Chatbot")
 #--------------------------------------       
+if "chat" not in st.session_state:
+
+    st.session_state.chat = create_chat()
+#---------------------------------------
+
 with st.sidebar:
 
     st.header("Gemini AI Chatbot")
@@ -35,9 +41,8 @@ with st.sidebar:
     st.write("⏳ Export Chat")
 
     if st.button("Clear Chat"):
-
         st.session_state.messages = []
-
+        st.session_state.chat = create_chat()
         st.rerun()
 #--------------------------------------       
 #user_input = st.text_area(
@@ -105,8 +110,14 @@ if prompt:
 
         #response = get_response(prompt)
         history = build_history(st.session_state.messages)
-        response = get_response(history)
+        #response = get_response(history)
 
+        response = send_message(
+                             st.session_state.chat,
+                             prompt
+                    )
+
+ 
     st.chat_message("assistant").markdown(response)
 
     st.session_state.messages.append(
