@@ -195,4 +195,8 @@ We'll add:
 🗂️ Multiple conversations (like ChatGPT)
 🎨 A polished interface with branding and icons
 
+
+From this point onward, we're no longer just building an internship project—we're building a professional AI application that you can proudly showcase during interviews.
+
+After Lesson 7, our chatbot will feel much closer to ChatGPT.
 #------------------------------------------------
