@@ -32,13 +32,9 @@ with st.sidebar:
 
     st.write("⏳ Google Search")
 
-    st.write("✅ Chat Interface")
-
-    st.write("✅ Conversation Memory")
-
-    st.write("⏳ Google Search")
-
     st.write("⏳ Export Chat")
+    
+    st.write("⏳ Chat History Download")
 
     if st.button("Clear Chat"):
         st.session_state.messages = []
