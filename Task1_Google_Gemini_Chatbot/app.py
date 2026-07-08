@@ -47,6 +47,14 @@ with st.sidebar:
                                 "Gemini Model",
                                 AVAILABLE_MODELS
                                 )
+
+    temperature = st.slider(
+                           "Temperature",
+                           min_value=0.0,
+                           max_value=2.0,
+                           value=0.7,
+                           step=0.1
+                          )
  
     st.write("⏳ Export Chat")
     chat_text=export_chat(
