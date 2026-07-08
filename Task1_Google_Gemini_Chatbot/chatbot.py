@@ -48,9 +48,19 @@ def create_chat():
 
 
 def send_message(chat, prompt):
-
+    """
+    Now Gemini can automatically use Google Search 
+    when it determines that current information 
+    is needed.
+    """
     response = chat.send_message(
-        prompt
-    )
-
+        prompt,
+        config=types.GenerateContentConfig(
+            tools=[
+                types.Tool(
+                    google_search=types.GoogleSearch()
+                          )
+                  ]
+         )
+     )
     return response.text
