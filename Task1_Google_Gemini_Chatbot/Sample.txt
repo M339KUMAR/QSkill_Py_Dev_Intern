@@ -234,3 +234,17 @@ Your chatbot now supports:
 ✅ About Section
 ✅ Better Configuration
 #------------------------------------------------
+🚀 Lesson 8: Enterprise-Level Features
+This is where the project becomes something you can confidently discuss in interviews as a real-world application.
+We'll add:
+🗄️ SQLite database to permanently store chats
+👤 User login and chat ownership
+📂 Multiple conversations (like ChatGPT)
+🔍 Conversation search
+📄 Export to PDF
+📊 Analytics dashboard (messages, sessions, usage)
+📝 Logging
+⚠️ Error logs
+🧪 Unit testing with pytest
+
+#------------------------------------------------
