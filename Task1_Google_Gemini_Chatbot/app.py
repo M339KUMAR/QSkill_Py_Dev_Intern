@@ -7,6 +7,7 @@ from chatbot import get_response
 from chatbot import create_chat, send_message
 from memory import build_history
 from utils import export_chart, get_timestamp
+from settings import AVAILABLE_MODELS
 
 #--------------------------------------       
 st.set_page_config(
@@ -42,6 +43,10 @@ with st.sidebar:
     st.success("Conversation Memory")
     #st.write("⏳ Google Search")
     st.success("Google  Search")
+    selected_model = st.selectbox(
+                                "Gemini Model",
+                                AVAILABLE_MODELS
+                                )
  
     st.write("⏳ Export Chat")
     chat_text=export_chat(
