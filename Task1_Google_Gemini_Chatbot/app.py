@@ -55,7 +55,21 @@ with st.sidebar:
                            value=0.7,
                            step=0.1
                           )
- 
+
+     max_tokens = st.slider(
+                          "Maximum Output Tokens",
+                          256,  8192,  2048,  256
+                          )
+
+     personality = st.selectbox(
+                          "Assistant Personality",
+                          ["General Assistant",
+                           "Python Expert",
+                           "Data Scientist",
+                           "Career Coach",
+                           "Teacher"  ]
+                           )
+
     st.write("⏳ Export Chat")
     chat_text=export_chat(
              st.session_state.messages
