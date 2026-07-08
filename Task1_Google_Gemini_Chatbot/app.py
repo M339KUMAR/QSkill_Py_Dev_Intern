@@ -43,6 +43,7 @@ with st.sidebar:
     st.success("Conversation Memory")
     #st.write("⏳ Google Search")
     st.success("Google  Search")
+    st.markdown("------------")
     selected_model = st.selectbox(
                                 "Gemini Model",
                                 AVAILABLE_MODELS
@@ -70,6 +71,20 @@ with st.sidebar:
                            "Teacher"  ]
                            )
 
+      theme = st.radio(
+                      "Theme",
+                      ["Light", "Dark" ]
+                     )
+
+      search = st.text_input(
+                            "Search Chat"
+                     )
+      if search:
+             filtered = [
+                         msg for msg in st.session_state.messages if search.lower() in msg["content"].lower()
+                        ]
+
+    st.markdown("------------")
     st.write("⏳ Export Chat")
     chat_text=export_chat(
              st.session_state.messages
@@ -81,13 +96,25 @@ with st.sidebar:
                      chat_text,
                      file_name="chat_history.txt"
                      )
+     st.markdown("------------")
+     with st.expander("About"):
+           st.write("""
+                   Gemini AI Chatbot
+                   Version: 1.0
+                   Built with:
+                    • Python
+                    • Streamlit
+                    • Google Gemini
+                    • Google Search
+             """)
  
     st.info("Professional UI:")
-
+    st.markdown("------------")
     st.metric(
              "Messages",
              len(st.session_state.messages)
     )
+    st.markdown("------------")
     st.info(
     "Model: Gemini 2.5 Flash"
     )
