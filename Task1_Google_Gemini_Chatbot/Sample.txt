@@ -89,4 +89,12 @@ Since your goal is to build an industry-level project, I recommend that in Lesso
 
 This will give you cleaner code and satisfy the remaining internship requirement in a way that's aligned with current best practices.
 #------------------------------------------------
+Lesson 5: Google Search Integration (Grounding)
+
+Objective
+We'll upgrade our chatbot to:
+✅ Remember conversations
+✅ Retrieve real-time information from Google Search
+✅ Answer questions using current web data
+✅ Continue using Streamlit
 
