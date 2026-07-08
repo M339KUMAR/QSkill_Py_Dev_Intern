@@ -1,5 +1,5 @@
 
-What you'll have after Lesson 1
+What you'll have after Lesson 1:
 ✅ Project folder
 ✅ Virtual environment
 ✅ Git repository
@@ -17,7 +17,7 @@ What You've Learned
 
 https://aistudio.google.com/api-keys?project=gen-lang-client-0945953124
 
-What We've Achieved
+What We've Achieved in Lesson 3: 
 ✅ Professional chat interface
 ✅ Chat history displayed
 ✅ Session State
@@ -68,4 +68,17 @@ The history sent to Gemini becomes:
 ]
 
 Gemini now receives the entire conversation and can answer context-aware questions.
-#-----------------------------------------
+
+from Lesson 4: 
+Your chatbot now supports:
+
+✅ Modern chat interface
+✅ Conversation history
+✅ Context-aware responses
+✅ Sidebar
+✅ Clear chat button
+✅ Modular code (app.py, chatbot.py, memory.py, config.py)
+
+This satisfies a major part of your internship requirement: remembering previous user messages and responses.
+#--------------------------------------------------
+
