@@ -13,32 +13,21 @@ def initialize_database():
 
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS conversations(
-
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-
             title TEXT,
-
             created_at TEXT
-
         )
     """)
 
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS messages(
-
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-
             conversation_id INTEGER,
-
             role TEXT,
-
             content TEXT,
-
             timestamp TEXT
-
         )
     """)
 
     conn.commit()
-
     conn.close()
