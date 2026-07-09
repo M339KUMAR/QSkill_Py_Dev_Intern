@@ -4,6 +4,7 @@ from config import GEMINI_API_KEY
 
 client = genai.Client(api_key=GEMINI_API_KEY)
 
+personality ='Teacher'
 
 def get_response(history):
 #def get_response(prompt: str) -> str:
