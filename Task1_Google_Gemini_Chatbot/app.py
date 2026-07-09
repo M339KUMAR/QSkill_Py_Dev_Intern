@@ -23,7 +23,10 @@ st.caption(
 )
 
 st.divider()
-#--------------------------------------       
+#--------------------------------------   
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+ 
 if "chat" not in st.session_state:
 
     st.session_state.chat = create_chat()
