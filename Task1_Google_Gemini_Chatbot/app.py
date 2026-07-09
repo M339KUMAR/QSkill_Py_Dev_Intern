@@ -57,12 +57,12 @@ with st.sidebar:
                            step=0.1
                           )
 
-     max_tokens = st.slider(
+    max_tokens = st.slider(
                           "Maximum Output Tokens",
                           256,  8192,  2048,  256
                           )
 
-     personality = st.selectbox(
+    personality = st.selectbox(
                           "Assistant Personality",
                           ["General Assistant",
                            "Python Expert",
@@ -71,18 +71,18 @@ with st.sidebar:
                            "Teacher"  ]
                            )
 
-      theme = st.radio(
+    theme = st.radio(
                       "Theme",
                       ["Light", "Dark" ]
                      )
 
-      search = st.text_input(
+    search = st.text_input(
                             "Search Chat"
                      )
       if search:
-             filtered = [
-                         msg for msg in st.session_state.messages if search.lower() in msg["content"].lower()
-                        ]
+         filtered = [
+                     msg for msg in st.session_state.messages if search.lower() in msg["content"].lower()
+                    ]
 
     st.markdown("------------")
     st.write("⏳ Export Chat")
