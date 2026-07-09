@@ -97,7 +97,7 @@ with st.sidebar:
                      file_name="chat_history.txt"
                      )
     st.markdown("------------")
-     with st.expander("About"):
+    with st.expander("About"):
            st.write("""
                    Gemini AI Chatbot
                    Version: 1.0
