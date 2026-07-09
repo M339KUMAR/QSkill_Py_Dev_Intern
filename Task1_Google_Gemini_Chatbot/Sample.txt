@@ -248,3 +248,45 @@ We'll add:
 🧪 Unit testing with pytest
 
 #------------------------------------------------
+Gemini-AI-Chatbot/
+│
+├── app.py
+├── chatbot.py
+├── config.py
+├── settings.py
+├── utils.py
+│
+├── database.py      ⭐ NEW
+├── models.py        ⭐ NEW
+├── services.py      ⭐ NEW
+│
+├── assets/
+├── chats/
+├── database/
+│      chatbot.db
+│
+├── docs/
+├── screenshots/
+└── requirements.txt
+#------------------------------------------
+Create Tables-->
+We'll create two tables.
+1. Conversations
+conversation_id
+title
+created_at
+
+2.Messages
+message_id
+conversation_id
+role
+content
+timestamp
+
+Relationship:
+Conversation
+      │
+      │ 1
+      │
+      ▼
+Many Messages
