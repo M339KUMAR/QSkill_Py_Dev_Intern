@@ -79,7 +79,7 @@ with st.sidebar:
     search = st.text_input(
                             "Search Chat"
                      )
-      if search:
+    if search:
          filtered = [
                      msg for msg in st.session_state.messages if search.lower() in msg["content"].lower()
                     ]
