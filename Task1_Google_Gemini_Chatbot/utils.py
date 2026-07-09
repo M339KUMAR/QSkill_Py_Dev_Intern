@@ -14,12 +14,17 @@ def export_chat(messages):
 
     for msg in messages:
 
-        text += f"[{msg['time']}]\n"
+        timestamp = msg.get("time", "No Timestamp")
+        role = msg.get("role", "unknown").upper()
+        content = msg.get("content", "")
 
-        text += f"{msg['role'].upper()}:\n"
-
-        text += msg["content"]
-
-        text += "\n\n"
+        text += f"[{timestamp}]\n"
+        text += f"{role}:\n"
+        text += f"{content}\n\n"
+        
+        #text += f"[{msg['time']}]\n"
+        #text += f"{msg['role'].upper()}:\n"
+        #text += msg["content"]
+        #text += "\n\n"
 
     return text
