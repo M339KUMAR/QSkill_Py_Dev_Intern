@@ -180,15 +180,33 @@ prompt = st.chat_input("Ask me anything...")
 
 if prompt:
 
+     # Save the user's message
+    st.session_state.messages.append({
+        "role": "user",
+        "content": prompt,
+        "time": get_timestamp()
+    })
+
+    # Get Gemini's response
+    response = send_message(st.session_state.chat, prompt)
+
+    # Save Gemini's response
+    st.session_state.messages.append({
+        "role": "assistant",
+        "content": response,
+        "time": get_timestamp()
+    })
+
+   
     # Display user message
     st.chat_message("user").markdown(prompt)
 
-    st.session_state.messages.append(
-        {
-            "role": "user",
-            "content": prompt
-        }
-    )
+    #st.session_state.messages.append(
+    #    {
+    #        "role": "user",
+    #        "content": prompt
+    #    }
+    #)
 
     # Gemini response
     with st.spinner("Thinking..."):
@@ -209,9 +227,9 @@ if prompt:
 
     st.chat_message("assistant").markdown(response)
 
-    st.session_state.messages.append(
-        {
-            "role": "assistant",
-            "content": response
-        }
-    )
+    #st.session_state.messages.append(
+    #    {
+    #        "role": "assistant",
+    #        "content": response
+    #    }
+    #)
