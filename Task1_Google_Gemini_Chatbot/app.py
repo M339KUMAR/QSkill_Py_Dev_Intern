@@ -27,9 +27,14 @@ st.divider()
 if "messages" not in st.session_state:
     st.session_state.messages = []
  
-if "chat" not in st.session_state:
+#if "chat" not in st.session_state:
+#    st.session_state.chat = create_chat()
 
-    st.session_state.chat = create_chat()
+if "selected_model" not in st.session_state:
+    st.session_state.selected_model = AVAILABLE_MODELS[0]
+
+if "chat" not in st.session_state:
+    st.session_state.chat = create_chat(st.session_state.selected_model)
 #---------------------------------------
 
 with st.sidebar:
@@ -51,6 +56,11 @@ with st.sidebar:
                                 "Gemini Model",
                                 AVAILABLE_MODELS
                                 )
+    if selected_model != st.session_state.selected_model:
+
+       st.session_state.selected_model = selected_model
+       st.session_state.chat = create_chat(selected_model)
+       st.rerun()
 
     temperature = st.slider(
                            "Temperature",
@@ -128,7 +138,9 @@ with st.sidebar:
     if st.button("🆕 New Chat"):
     #if st.button("Clear Chat"):
         st.session_state.messages = []
-        st.session_state.chat = create_chat()
+        #st.session_state.chat = create_chat()
+        st.session_state.chat = create_chat(
+             st.session_state.selected_model)
         st.rerun()
 #--------------------------------------       
 #user_input = st.text_area(
@@ -189,18 +201,20 @@ if prompt:
     })
 
     # Get Gemini's response
-    response = send_message(st.session_state.chat, prompt)
+    #response = send_message(st.session_state.chat, prompt)
 
-    # Save Gemini's response
-    st.session_state.messages.append({
-        "role": "assistant",
-        "content": response,
-        "time": get_timestamp()
-    })
-
-   
     # Display user message
     st.chat_message("user").markdown(prompt)
+ 
+    # Save Gemini's response
+    #st.session_state.messages.append({
+    #    "role": "assistant",
+    #    "content": response,
+    #    "time": get_timestamp()
+    #})
+
+    # Display user message
+    #st.chat_message("user").markdown(prompt)
 
     #st.session_state.messages.append(
     #    {
@@ -234,3 +248,17 @@ if prompt:
     #        "content": response
     #    }
     #)
+
+    #st.session_state.messages.append(
+    #    {
+    #        "role": "user",
+    #        "content": prompt
+    #    }
+    #)
+
+    #Save Gemini's response
+    st.session_state.messages.append({
+        "role": "assistant",
+        "content": response,
+        "time": get_timestamp()
+    })
