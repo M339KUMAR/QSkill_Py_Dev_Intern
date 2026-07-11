@@ -40,10 +40,17 @@ def get_response(history):
 
 #    return response.text
 
-def create_chat():
+#def create_chat():
+#
+#    chat = client.chats.create(
+#        model="gemini-2.5-flash"
+#    )
+#
+#    return chat
+def create_chat(model):
 
     chat = client.chats.create(
-        model="gemini-2.5-flash"
+        model=model
     )
 
     return chat
