@@ -119,7 +119,8 @@ with st.sidebar:
     )
     st.markdown("------------")
     st.info(
-    "Model: Gemini 2.5 Flash"
+    #"Model: Gemini 2.5 Flash"
+     selected_model
     )
  
     st.markdown("------------")
