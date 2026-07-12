@@ -19,6 +19,14 @@ st.set_page_config(
 if "theme" not in st.session_state:
     st.session_state.theme = "Light"
 
+theme = st.radio(
+    "Theme",
+    ["Light", "Dark"],
+    index=0 if st.session_state.theme == "Light" else 1
+)
+
+st.session_state.theme = theme
+
 if st.session_state.theme == "Dark":
     st.markdown(
         """
