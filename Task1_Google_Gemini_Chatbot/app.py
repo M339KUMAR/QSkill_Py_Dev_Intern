@@ -15,6 +15,9 @@ st.set_page_config(
     page_icon="🤖",
 )
 
+if "theme" not in st.session_state:
+    st.session_state.theme = "Light"
+ 
 #st.title("🤖 Gemini AI Chatbot")
 st.title("🤖 Gemini AI Assistant")
 
@@ -88,6 +91,7 @@ with st.sidebar:
                       "Theme",
                       ["Light", "Dark" ]
                      )
+    st.session_state.theme = theme
 
     search = st.text_input(
                             "Search Chat"
