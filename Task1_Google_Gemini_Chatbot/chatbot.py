@@ -112,7 +112,7 @@ def send_message(chat, prompt, personality):
 #        "You help candidates prepare for interviews.",
 
 #    "Teacher":
-        "Explain concepts step-by-step using simple language."
+#        "Explain concepts step-by-step using simple language."
 #}
 
 #full_prompt = (
