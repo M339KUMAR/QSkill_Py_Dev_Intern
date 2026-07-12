@@ -121,11 +121,11 @@ with st.sidebar:
                            "Teacher"  ]
                            )
 
-    theme = st.radio(
-                      "Theme",
-                      ["Light", "Dark" ]
-                     )
-    st.session_state.theme = theme
+    #theme = st.radio(
+    #                  "Theme",
+    #                  ["Light", "Dark" ]
+    #                 )
+    #st.session_state.theme = theme
 
     search = st.text_input(
                             "Search Chat"
