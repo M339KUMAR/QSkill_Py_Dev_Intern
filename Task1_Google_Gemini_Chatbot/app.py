@@ -15,9 +15,35 @@ st.set_page_config(
     page_icon="🤖",
 )
 
+#------------------------------------------------
 if "theme" not in st.session_state:
     st.session_state.theme = "Light"
- 
+
+if st.session_state.theme == "Dark":
+    st.markdown(
+        """
+        <style>
+        .stApp {
+            background-color: #0E1117;
+            color: white;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+else:
+    st.markdown(
+        """
+        <style>
+        .stApp {
+            background-color: white;
+            color: black;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+#------------------------------------------
 #st.title("🤖 Gemini AI Chatbot")
 st.title("🤖 Gemini AI Assistant")
 
