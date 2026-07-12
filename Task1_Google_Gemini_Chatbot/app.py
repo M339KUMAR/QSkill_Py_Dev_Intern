@@ -235,7 +235,8 @@ if prompt:
          
             response = send_message(
                              st.session_state.chat,
-                             prompt
+                             prompt,
+                             personslity
                     )
         except Exception as e:
             response = f"Error: {e}"          
