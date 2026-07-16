@@ -32,7 +32,7 @@ if st.session_state.theme == "Dark":
         """
         <style>
         .stApp {
-            background-color: #0E1117;
+            background-color: #D3D3D3;       #  #0E1117;
             color: white;
         }
         </style>
