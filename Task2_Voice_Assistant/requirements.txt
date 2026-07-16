@@ -1,3 +1,4 @@
+pip install --upgrade pip
 streamlit==1.59.2
 streamlit-mic-recorder==0.0.8
 Speech recognition==3.16.1 
